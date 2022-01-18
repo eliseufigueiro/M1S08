@@ -6,6 +6,9 @@ public abstract class Personagem {
     private Integer pontosDeAtaque;
     private Integer pontosDeDefesa;
 
+    public Personagem() {
+    }
+
     public Personagem(Integer pontosDeSaude, Integer pontosDeAtaque, Integer pontosDeDefesa) {
         this.pontosDeSaude = pontosDeSaude;
         this.pontosDeAtaque = pontosDeAtaque;
