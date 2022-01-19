@@ -6,10 +6,11 @@ import model.exceptions.ArmaIncompativelComClasseException;
 public class Guerreiro extends Jogador {
 
     public Guerreiro(String nome, String sexo, Arma arma) throws ArmaIncompativelComClasseException {
-        super(pontosDeSaude, pontosDeAtaque, pontosDeDefesa, nome, sexo, arma);
+        super(nome, sexo, arma);
         if (arma != Arma.ESPADA || arma != Arma.MACHADO) {
-            throw new ArmaIncompativelComClasseException("Arma incompativél com a classe escolhida!");
+            throw new ArmaIncompativelComClasseException("Arma incompatível com a classe escolhida!");
         }
+        super.setPontosDeAtaque(15);
+        super.setPontosDeDefesa(15);
     }
-
 }
