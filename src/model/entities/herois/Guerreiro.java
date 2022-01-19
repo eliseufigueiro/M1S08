@@ -1,5 +1,6 @@
-package model.entities;
+package model.entities.herois;
 
+import model.entities.Jogador;
 import model.enums.Arma;
 import model.exceptions.ArmaIncompativelComClasseException;
 
