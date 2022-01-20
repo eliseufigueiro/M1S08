@@ -1,5 +1,7 @@
-package model.entities;
+package model.entities.inimigos;
 
+import model.entities.Atacante;
+import model.entities.Personagem;
 import model.enums.Arma;
 
 public class Armadilha implements Atacante {

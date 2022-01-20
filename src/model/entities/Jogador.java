@@ -9,22 +9,19 @@ public abstract class Jogador extends Personagem implements Atacante {
     private String sexo;
     private Motivacao motivacao;
     private Arma arma;
-    private final Integer MAX_HP = 200;
+    private static final Integer MAX_HP = 200;
 
-    public Jogador() {
-
-    }
-
-    public Jogador(String nome, String sexo, Arma arma) {
+    public Jogador(Integer pontosDeAtaque, Integer pontosDeDefesa, String nome, String sexo, Motivacao motivacao, Arma arma) {
+        super(MAX_HP, pontosDeAtaque, pontosDeDefesa);
         if (nome == "") {
             throw new IllegalArgumentException("Seu personagem precisa de um Nome bacana!");
         }
         if (sexo != "M" || sexo != "F") {
             throw new IllegalArgumentException("Utilize M ou F, maiúsculos!");
         }
-        super.setPontosDeSaude(MAX_HP);
         this.nome = nome;
         this.sexo = sexo;
+        this.motivacao = motivacao;
         this.arma = arma;
     }
 }

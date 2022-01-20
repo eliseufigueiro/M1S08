@@ -1,17 +1,22 @@
 package model.entities.herois;
 
 import model.entities.Jogador;
+import model.entities.Personagem;
 import model.enums.Arma;
+import model.enums.Motivacao;
 import model.exceptions.ArmaIncompativelComClasseException;
 
 public class Arqueiro extends Jogador {
 
-    public Arqueiro(String nome, String sexo, Arma arma) throws ArmaIncompativelComClasseException {
-        super(nome, sexo, arma);
+    public Arqueiro(String nome, String sexo, Motivacao motivacao, Arma arma) throws ArmaIncompativelComClasseException {
+        super(18, 15, nome, sexo, motivacao, arma);
         if (arma != Arma.ARCO || arma != Arma.BESTA) {
             throw new ArmaIncompativelComClasseException("Arma incompatível com a classe escolhida!");
         }
-        super.setPontosDeAtaque(18);
-        super.setPontosDeDefesa(13);
+    }
+
+    @Override
+    public void atacar(Personagem atacado) {
+
     }
 }
