@@ -11,7 +11,7 @@ public abstract class Jogador extends Personagem implements Atacante {
     private Arma arma;
     private static final Integer MAX_HP = 200;
 
-    public Jogador(Integer pontosDeAtaque, Integer pontosDeDefesa, String nome, String sexo, Motivacao motivacao, Arma arma) {
+    public Jogador(Integer pontosDeAtaque, Integer pontosDeDefesa, String nome, String sexo, Arma arma) {
         super(MAX_HP, pontosDeAtaque, pontosDeDefesa);
         if (nome == "") {
             throw new IllegalArgumentException("Seu personagem precisa de um Nome bacana!");
