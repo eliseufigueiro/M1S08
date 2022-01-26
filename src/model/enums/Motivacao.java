@@ -2,6 +2,12 @@ package model.enums;
 
 public enum Motivacao {
 
-    VINGANCA,
-    GLORIA;
+    VINGANCA("VINGANÇA"),
+    GLORIA("GLORIA"),
+    SEGUE("SEGUE"),
+    DESISTE("DESISTE");
+
+
+    Motivacao(String m) {
+    }
 }

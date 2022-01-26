@@ -16,26 +16,32 @@ public abstract class Personagem {
     }
 
     public Integer getPontosDeSaude() {
+
         return pontosDeSaude;
     }
 
     public void setPontosDeSaude(Integer pontosDeSaude) {
+
         this.pontosDeSaude = pontosDeSaude;
     }
 
     public Integer getPontosDeAtaque() {
+
         return pontosDeAtaque;
     }
 
     public void setPontosDeAtaque(Integer pontosDeAtaque) {
+
         this.pontosDeAtaque = pontosDeAtaque;
     }
 
     public Integer getPontosDeDefesa() {
+
         return pontosDeDefesa;
     }
 
     public void setPontosDeDefesa(Integer pontosDeDefesa) {
+
         this.pontosDeDefesa = pontosDeDefesa;
     }
 
