@@ -1,5 +1,7 @@
 package model.enums;
 
+import model.exceptions.NomeIncompativelComClasseException;
+
 public enum Arma {
 
     ESPADA("ESPADA"),
@@ -14,5 +16,6 @@ public enum Arma {
     MACHADO_DUPLO("MACHADO DUPLO");
 
     Arma(String a) {
+
     }
 }

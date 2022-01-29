@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Historia {
 
-    private static Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
     public void introducao() {
 

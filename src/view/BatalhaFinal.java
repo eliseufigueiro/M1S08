@@ -1,37 +1,38 @@
 package view;
 
-import model.exceptions.ArmaIncompativelComClasseException;
 import model.servicos.Historia;
 import model.servicos.Planilha;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class BatalhaFinal {
 
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
+    public static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
 
         Planilha planilha = new Planilha();
         Historia historia = new Historia();
+        String CSI = "\u001B[";
 
-        try {
-            System.out.println("\nSeja bem vindo(a) à BATALHA FINAL!\n");
+            try {
+                System.out.print (CSI + "34" + "m");
+                System.out.println("<********||============================================>");
+                System.out.println("           Seja bem vindo(a) à BATALHA FINAL            ");
+                System.out.println("<============================================||********>");
+                System.out.println (CSI + "m");
 
-            planilha.preencherPlanilha();
+                planilha.preencherPlanilha();
 
-            historia.introducao();
+                historia.introducao();
 
-            historia.motivacao();
+                historia.motivacao();
 
-            historia.segueEmFrenteOuDesiste();
+                historia.segueEmFrenteOuDesiste();
 
-        } catch (ArmaIncompativelComClasseException e) {
-            e.printStackTrace();
-
-        } finally {
-            sc.close();
-        }
+            } finally {
+                sc.close();
+            }
 
 
         //private void combate (/* parâmetros */) {
@@ -47,6 +48,25 @@ public class BatalhaFinal {
 		Se escolher atacar, o jogo deve realizar o cálculo do ataque e atualizar os pontos de vida do inimigo. O jogo deve exibir a mensagem “Você atacou {COMPLEMENTO DA ARMA} e causou X de dano no inimigo!”, substituindo o conteúdo entre chaves de acordo com a arma do personagem. Espada, machado, martelo ou clava: “com sua/seu {ARMA}”. Arco+flecha ou besta+virote: “com seu/sua {ARMA}, a/o {MUNIÇÃO} atingiu”. Cajado: “com seu cajado, lançando uma bola de fogo”. Livro: “absorvendo energia do livro com uma mão e liberando com a outra”.
 		Se o jogador errar, a mensagem exibida deve ser “Você errou seu ataque! O inimigo não sofreu dano algum.”. Se o jogador acertar um ataque crítico, a mensagem deve ser: "Você acertou um ataque crítico! {COMPLEMENTO}” substituindo o conteúdo entre chaves pela mensagem de ataque normal.
 		Caso o inimigo morra com o seu ataque, o jogo deve exibir “O inimigo não é páreo para o seu heroísmo, e jaz imóvel aos seus pés.”
+
+
+		String CSI = "\u001B[";
+                System.out.print (CSI + "31" + "m");
+                System.out.print ("Texto vermelho");
+                System.out.println (CSI + "m");
+
+                System.out.print (CSI + "32" + "m");
+                System.out.print ("Texto verde");
+                System.out.println (CSI + "m");
+
+                System.out.print (CSI + "33" + "m");
+                System.out.print ("Texto amarelo");
+                System.out.println (CSI + "m");
+
+                System.out.print (CSI + "39" + "m");
+                System.out.print ("Texto normal");
+                System.out.println (CSI + "m");
+
 		*/
 
 
