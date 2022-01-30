@@ -11,28 +11,23 @@ public class BatalhaFinal {
 
     public static void main(String[] args) {
 
-        Planilha planilha = new Planilha();
         Historia historia = new Historia();
         String CSI = "\u001B[";
 
-            try {
-                System.out.print (CSI + "34" + "m");
-                System.out.println("<********||============================================>");
-                System.out.println("           Seja bem vindo(a) à BATALHA FINAL            ");
-                System.out.println("<============================================||********>");
-                System.out.println (CSI + "m");
+        try {
+            historia.tituloDaAventura();
 
-                planilha.preencherPlanilha();
+            historia.planilha();
 
-                historia.introducao();
+            historia.introducao();
 
-                historia.motivacao();
+            historia.motivacao();
 
-                historia.segueEmFrenteOuDesiste();
+            historia.segueEmFrenteOuDesiste();
 
-            } finally {
-                sc.close();
-            }
+        } finally {
+            sc.close();
+        }
 
 
         //private void combate (/* parâmetros */) {

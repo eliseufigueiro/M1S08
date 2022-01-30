@@ -4,7 +4,7 @@ public enum Motivacao {
 
     VINGANCA("VINGANÇA"),
     GLORIA("GLORIA"),
-    SEGUE("SEGUE"),
+    FRENTE("FRENTE"),
     DESISTE("DESISTE");
 
 

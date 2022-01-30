@@ -1,80 +1,122 @@
 package model.servicos;
 
+import model.entities.Jogador;
+import model.entities.inimigos.Armadilha;
 import model.enums.Motivacao;
 
 import java.util.Scanner;
 
 public class Historia {
 
+    private Jogador jogador;
+
+    public Jogador getJogador() {
+
+        return jogador;
+    }
+
+    //Metodos da historia
     Scanner sc = new Scanner(System.in);
+    String CSI = "\u001B["; //String que recebe as cores
+
+    public void tituloDaAventura() {
+        System.out.print(CSI + "34" + "m");
+        System.out.println("<********||============================================>");
+        System.out.println("           Seja bem vindo(a) à BATALHA FINAL            ");
+        System.out.println("<============================================||********>");
+        System.out.println(CSI + "m");
+    }
+
+    public void planilha() {
+
+        Planilha planilha = new Planilha();
+        this.jogador = planilha.preencherPlanilha();
+    }
 
     public void introducao() {
 
-        System.out.println("    A noite se aproxima, a lua já surge no céu, estrelas vão se acendendo,\n"
+        System.out.print(CSI + "33" + "m");
+        System.out.println("\n    A noite se aproxima, a lua já surge no céu, estrelas vão se acendendo,\n"
                 + "e sob a luz do crepúsculo você está prestes a entrar na fase final da sua missão.\n"
-                + "Você olha para o portal à sua frente, e sabe que a partir desse ponto, sua vida mudará para sempre.\n");
+                + "    Você olha para o portal à sua frente, e sabe que a partir desse ponto, sua vida mudará para sempre.\n");
 
         System.out.println("    Memórias do caminho percorrido para chegar até aqui invadem sua mente.\n"
-                + "Você se lembra de todos os inimigos já derrotados para alcançar o covil do líder maligno.\n"
-                + "Olha para seu equipamento de combate, já danificado e desgastado depois de tantas lutas.\n"
-                + "Você está a um passo de encerrar para sempre esse mal.\n");
+                + "    Você se lembra de todos os inimigos já derrotados para alcançar o covil do líder maligno.\n"
+                + "    Olha para seu equipamento de combate, já danificado e desgastado depois de tantas lutas.\n"
+                + "    Você está a um passo de encerrar para sempre esse mal.\n");
 
-        System.out.println("Buscando uma injeção de ânimo, você se força a lembrar o que te trouxe até aqui.\n");
+        System.out.println("    Buscando uma injeção de ânimo, você se força a lembrar o que te trouxe até aqui.\n");
+        System.out.print(CSI + "m");
     }
 
     public void motivacao() {
 
-        System.out.println("Qual é a sua motivação " + Motivacao.VINGANCA + " ou " + Motivacao.GLORIA + "? (Use Letra Maiúscula): ");
-        String motivacao = sc.next();
+        System.out.print("- Qual é a sua motivação " + Motivacao.VINGANCA + " ou " + Motivacao.GLORIA + "?\n(Use Letra Maiúscula): ");
+        Motivacao motivacao = Motivacao.valueOf(sc.next());
 
-        if (motivacao == "VINGANÇA") {
-            System.out.println("    Imagens daquela noite trágica invadem sua mente.\n"
-                    + "Você nem precisa se esforçar para lembrar, pois essas memórias estão sempre presentes,\n"
+        if (motivacao == Motivacao.VINGANCA) {
+
+            System.out.print(CSI + "33" + "m");
+            System.out.println("\n    Imagens daquela noite trágica invadem sua mente.\n"
+                    + "    Você nem precisa se esforçar para lembrar, pois essas memórias estão sempre presentes,\n"
                     + "mesmo que de pano de fundo, quando você tem outros pensamentos em foco, elas nunca o deixaram.\n"
-                    + "Elas são o combustível que te fizeram chegar até aqui.\n"
-                    + "E você sabe que não irá desistir até ter vingado a morte\n"
+                    + "    Elas são o combustível que te fizeram chegar até aqui.\n"
+                    + "    E você sabe que não irá desistir até ter vingado a morte\n"
                     + "daqueles que foram - e pra sempre serão - sua fonte de amor e desejo de continuar vivo.\n"
-                    + "O maldito líder finalmente pagará por tanto mal causado na vida de tantos\n"
+                    + "    O maldito líder finalmente pagará por tanto mal causado na vida de tantos\n"
                     + "(e principalmente na sua).\n");
-        } else {
-            System.out.println("    Você já consegue visualizar na sua mente o povo da cidade te recebendo de braços abertos,\n"
+            System.out.print(CSI + "m");
+
+        } else if (motivacao == Motivacao.GLORIA) {
+
+            System.out.print(CSI + "33" + "m");
+            System.out.println("\n    Você já consegue visualizar na sua mente o povo da cidade te recebendo de braços abertos,\n"
                     + "bardos criando canções sobre seus feitos heróicos, nobres te presenteando com jóias e diversas riquezas,\n"
                     + "taberneiros se recusando a cobrar por suas bebedeiras e comilanças.\n"
-                    + "Desde já, você sente o amor do público, te louvando a cada passo que dá pelas ruas,\n"
+                    + "    Desde já, você sente o amor do público, te louvando a cada passo que dá pelas ruas,\n"
                     + "depois de destruir o vilão que tanto assombrou a paz de todos.\n"
-                    + "Porém, você sabe que ainda falta o último ato dessa história.\n"
-                    + "Você se concentra na missão.\n"
-                    + "A glória o aguarda, mas não antes da última batalha.\n");
+                    + "    Porém, você sabe que ainda falta o último ato dessa história.\n"
+                    + "    Você se concentra na missão.\n"
+                    + "    A glória o aguarda, mas não antes da última batalha.\n");
 
             System.out.println("    Inspirado pelo motivo que te trouxe até aqui, você sente seu coração ardendo em chamas,\n"
                     + "suas mãos formigarem em volta da sua arma. Você a segura com firmeza. Seu foco está renovado.\n"
-                    + "Você avança pelo portal.\n");
+                    + "    Você avança pelo portal.\n");
 
             System.out.println("    A escuridão te envolve. Uma iluminação muito fraca entra pelo portal às suas costas.\n"
-                    + "À sua frente, só é possível perceber que você se encontra em um corredor extenso.\n"
-                    + "Você só pode ir à frente, ou desistir.\n");
+                    + "    À sua frente, só é possível perceber que você se encontra em um corredor extenso.\n"
+                    + "    Você só pode ir à frente, ou desistir.\n");
+            System.out.print(CSI + "m");
         }
     }
 
     public void segueEmFrenteOuDesiste() {
 
-        System.out.print("Você SEGUE em frente ou DESISTE? (Use Letra Maiúscula): ");
+        System.out.print("- Você segue em " + Motivacao.FRENTE + " ou " + Motivacao.DESISTE + "?\n(Use Letra Maiúscula): ");
         Motivacao segueEmFrenteOuDesiste = Motivacao.valueOf(sc.next());
 
         if (segueEmFrenteOuDesiste == Motivacao.DESISTE) {
-            System.out.println("O medo invade o seu coração e você sente que ainda não está à altura do desafio.\n"
-                    + "Você se volta para a noite lá fora, e corre em direção à segurança.\n");
-        } else {
-            System.out.println("Você caminha, atento a todos os seus sentidos, por vários metros,\n"
+
+            System.out.print(CSI + "33" + "m");
+            System.out.println("\n    O medo invade o seu coração e você sente que ainda não está à altura do desafio.\n"
+                    + "    Você se volta para a noite lá fora, e corre em direção à segurança.\n");
+            System.out.print(CSI + "m");
+
+        } else if (segueEmFrenteOuDesiste == Motivacao.FRENTE) {
+
+            System.out.print(CSI + "33" + "m");
+            System.out.println("\n    Você caminha, atento a todos os seus sentidos, por vários metros,\n"
                     + "até visualizar a frente uma fonte de luz, que você imagina ser a chama de uma tocha,\n"
                     + "vindo de dentro de uma porta aberta.");
 
-            System.out.println("Você se pergunta se dentro dessa sala pode haver inimigos, ou alguma armadilha,\n"
+            System.out.println("    Você se pergunta se dentro dessa sala pode haver inimigos, ou alguma armadilha,\n"
                     + "e pondera sobre como passar pela porta.\n");
+            System.out.print(CSI + "m");
 
 
-
-
+//PAREI AQUI
+            Armadilha armadilha = new Armadilha();
+            armadilha.atacar(jogador);
 
 
 
