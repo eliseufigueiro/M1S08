@@ -35,7 +35,7 @@ public class Armadilha implements Atacante {
         int valorDado = dadoDe10.nextInt(10);
         if (valorDado == 1) {
 
-            System.out.println("- O ataque da armadilha pegou de raspão e você não sofreu dano.");
+            System.out.print("\n- O ataque da armadilha pegou de raspão e você não sofreu dano.");
 
         } else {
 
@@ -44,7 +44,7 @@ public class Armadilha implements Atacante {
             atacado.setPontosDeSaude(dano);
             int hp = atacado.getPontosDeSaude();
 
-            System.out.printf("- Você sofreu %d de dano e agora possui %d pontos de vida.", ataque, hp);
+            System.out.printf("\n- Você sofreu %d de dano e agora possui %d pontos de vida.", ataque, hp);
         }
         System.out.println (CSI + "m");
     }

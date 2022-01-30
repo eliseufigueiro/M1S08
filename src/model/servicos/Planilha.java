@@ -101,7 +101,7 @@ public class Planilha {
             sc = new Scanner(System.in); //Cria um novo objeto scanner, quando o loop é acionado não da erro pulando a linha do nome
         } while (planilhaFinalizada);
 
-        System.out.print("- Pressione Enter para começar sua Aventura!\n");
+        System.out.print("- Pressione Enter para começar sua Aventura!");
         try {
             System.in.read();
         } catch (IOException e) {

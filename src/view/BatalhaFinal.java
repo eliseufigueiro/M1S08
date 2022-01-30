@@ -1,32 +1,24 @@
 package view;
 
-import model.servicos.Historia;
-import model.servicos.Planilha;
+import model.servicos.RodadaRPG;
 
 import java.util.Scanner;
 
 public class BatalhaFinal {
 
-    public static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
 
-        Historia historia = new Historia();
-        String CSI = "\u001B[";
+        Scanner sc = new Scanner(System.in);
+        RodadaRPG newPlay = new RodadaRPG();
 
         try {
-            historia.tituloDaAventura();
 
-            historia.planilha();
-
-            historia.introducao();
-
-            historia.motivacao();
-
-            historia.segueEmFrenteOuDesiste();
+            newPlay.rodadaRPG();
 
         } finally {
+
             sc.close();
+
         }
 
 

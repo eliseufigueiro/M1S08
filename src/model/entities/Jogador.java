@@ -37,6 +37,10 @@ public abstract class Jogador extends Personagem implements Atacante {
         return motivacao;
     }
 
+    public void setMotivacao(Motivacao motivacao) {
+        this.motivacao = motivacao;
+    }
+
     public Arma getArma() {
         return arma;
     }

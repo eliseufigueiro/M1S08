@@ -5,8 +5,14 @@ public enum Motivacao {
     VINGANCA("VINGANÇA"),
     GLORIA("GLORIA"),
     FRENTE("FRENTE"),
-    DESISTE("DESISTE");
-
+    DESISTE("DESISTE"),
+    ANDANDO("ANDANDO"),
+    CORRENDO("CORRENDO"),
+    SALTANDO("SALTANDO"),
+    SIM("SIM"),
+    NAO("NAO"),
+    ATACAR("ATACAR"),
+    ESPERAR("ESPERAR");
 
     Motivacao(String m) {
     }
