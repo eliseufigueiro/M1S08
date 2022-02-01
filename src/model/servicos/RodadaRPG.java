@@ -1,6 +1,7 @@
 package model.servicos;
 
 import model.entities.Jogador;
+import model.entities.inimigos.Armeiro;
 import model.enums.Motivacao;
 
 public class RodadaRPG {
@@ -20,6 +21,7 @@ public class RodadaRPG {
 
     public void rodadaRPG() {
 
+        Combate combate = null;
         Interacao interacao = new Interacao();
         Historia historia = new Historia();
 
@@ -42,11 +44,11 @@ public class RodadaRPG {
             historia.segueEmFrente();
             historia.entrarNaSala(interacao.andandoCorrendoSaltando());
             historia.dentroDaSala();
-            historia.combateArmeiro();
+            historia.combateArmeiro(new Combate(jogador, new Armeiro()));
             historia.combateArmeiroPegarArmadura(interacao.pegarArmadura());
             historia.combateAlquimista();
             historia.combateAlquimistaPegarCarrafa(interacao.pegarGarrafa());
-            historia.combateLider(interacao.iniciaticaDeCombate());
+            historia.combateLider(interacao.iniciativaAtacarEsperar());
             historia.finalAventura();
         }
     }

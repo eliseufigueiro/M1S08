@@ -21,6 +21,14 @@ public class BatalhaFinal {
 
         }
 
+        //TODO: Refatorar a interação da planilha, levando para a classe Interacao
+        //TODO: Add loop no try-catch das interações
+        //TODO: FRENTE ou DESISTE esta duplicado
+        //TODO: Add cor amarela para restante do tx, após armadilha
+
+        //TODO: Add áudios
+        //TODO: Add tabuleiro e movimentação
+
 
         //private void combate (/* parâmetros */) {
 		/*

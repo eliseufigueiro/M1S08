@@ -9,6 +9,7 @@ public class Lider extends Inimigo {
     private static final Integer MAX_HP = 200;
 
     public Lider() {
+
         super(MAX_HP, 15, 15, Arma.MACHADO_DUPLO);
     }
 

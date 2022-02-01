@@ -9,6 +9,7 @@ public class Alquimista extends Inimigo {
     private static final Integer MAX_HP = 100;
 
     public Alquimista() {
+
         super(MAX_HP, 15, 10, Arma.CAJADO);
     }
 

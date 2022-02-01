@@ -40,7 +40,7 @@ public class Historia {
         System.out.print(CSI + "m");
     }
 
-    public void motivacao(Motivacao motivacao) {
+    public void motivacao(Motivacao motivacao) throws IllegalArgumentException {
 
         System.out.print(CSI + "33" + "m");
 
@@ -140,7 +140,7 @@ public class Historia {
                 + "e você entende que precisará primeiro derrotar o que estiver nas outras duas portas laterais,\n"
                 + "antes de conseguir enfrentar o líder.");
 
-        System.out.println("\n- Você se dirige para a porta à direita.\n");
+        System.out.println("\n- Você se dirige para a porta à direita.");
 
         System.out.println("\n- Você se aproxima, tentando ouvir o que acontece porta adentro, mas não escuta nada.\n"
                 + "- Segura com mais força sua arma com uma mão, enquanto empurra a porta com a outra.\n"
@@ -154,9 +154,9 @@ public class Historia {
                 + "- Ele avança em sua direção.");
     }
 
-    public void combateArmeiro() {
+    public void combateArmeiro(Combate combate) {
 
-        // TODO: instanciar objeto Armeiro
+        combate.combate();
         // TODO: iniciar loop de combate, inimigo ataca primeiro
 
         System.out.println("\n- Após derrotar o Armeiro, você percebe que seus equipamentos estão muito danificados.\n"

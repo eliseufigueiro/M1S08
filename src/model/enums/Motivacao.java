@@ -12,7 +12,8 @@ public enum Motivacao {
     SIM("SIM"),
     NAO("NAO"),
     ATACAR("ATACAR"),
-    ESPERAR("ESPERAR");
+    ESPERAR("ESPERAR"),
+    FUGIR("FUGIR");
 
     Motivacao(String m) {
     }

@@ -9,27 +9,24 @@ public class Interacao {
 
     public Motivacao motivacao() {
 
-        boolean loop = true;
-        Motivacao motivacao = null;
+        Motivacao motivacao;
 
-        while (loop) {
+        while (true) {
 
             try {
                 System.out.print("- Qual é a sua motivação " + Motivacao.VINGANCA + " ou " + Motivacao.GLORIA + "?\n(Use Letra Maiúscula): ");
                 motivacao = Motivacao.valueOf(sc.next());
 
-                loop = false;
+                break;
 
             } catch (IllegalArgumentException e) {
                 System.err.println("CAMPO INVALIDO: " + e.getMessage());
-                sc.nextLine();
+                System.out.println("\n");
             }
-
-            sc = new Scanner(System.in); //Cria um novo objeto scanner, quando o loop é acionado não da erro pulando a linha do nome
         }
-
         return motivacao;
     }
+
 
     public Motivacao segueEmFrenteOuDesiste() {
 
@@ -39,7 +36,7 @@ public class Interacao {
 
     public Motivacao andandoCorrendoSaltando() {
 
-        System.out.print("- Você deseja passar pela porta ANDANDO cuidadosamente, CORRENDO ou SALTANDO?\n(Escolha 1, 2 ou 3): ");
+        System.out.print("- Você deseja passar pela porta ANDANDO cuidadosamente, CORRENDO ou SALTANDO?\n(Use Letra Maiúscula): ");
         return Motivacao.valueOf(sc.next());
     }
 
@@ -55,7 +52,13 @@ public class Interacao {
         return Motivacao.valueOf(sc.next());
     }
 
-    public Motivacao iniciaticaDeCombate() {
+    public Motivacao iniciativaDeCombate(){
+
+        System.out.print("- Você deseja " + Motivacao.ATACAR + " ou " + Motivacao.FUGIR + "? ");
+        return Motivacao.valueOf(sc.next());
+    }
+
+    public Motivacao iniciativaAtacarEsperar() {
 
         System.out.print("- Você deseja " + Motivacao.ATACAR + " ou " + Motivacao.ESPERAR + "? ");
         return Motivacao.valueOf(sc.next());
